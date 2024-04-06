@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!--display name on tab-->
+    <title>
+        BBB-A Skin
+    </title>
+ 
+
+
+    <!--Style and coloring of the website-->
+    <style>
+        /* Color for the webpage background*/
+        body {
+            background-color: #fefffe;
+            font-family: Georgia;
+            text-align: center;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #cee0d0;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+ 
+        /* Styling form-control input, 
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio 
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: #fefffe;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+ 
+
+
+
+<body>
+    <h1>SkinCare Questionnaire</h1>
+    <script>src = "script.js"</script>
+
+    <!-- Create Form -->
+    <form id="form">
+ 
+        <!-- Details of the form-->
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                What is your skin type? 
+            </label>
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="normal">Normal</option>
+                <option value="oily">Oily</option>
+                <option value="dry">Dry</option>
+                <option value="combination">Combination</option>
+                <option value="Unsure">Unsure</option>
+            </select>
+        </div>
+ 
+        <div class="form-control">
+            <label>
+                Checkbox test. Is this working? 
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio" id="recommed-1"
+                       name="recommed">Yes
+                  </input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2"
+                       name="recommed">No
+                  </input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3"
+                       name="recommed">Maybe
+                  </input>
+            </label>
+        </div>
+ 
+        <div class="form-control">
+            <label>Checkbox with multiple choices. Is this working? 
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox" name="inp">C
+                  </input>
+              </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp">Yes
+                  </input>
+            </label>
+            <label for="inp-3">
+                <input type="checkbox" name="inp">Fuck yes
+                  </input>
+            </label>
+            <label for="inp-4">
+                <input type="checkbox" name="inp">No
+                  </input>
+            </label>
+            <label for="inp-5">
+                <input type="checkbox" name="inp">Fuck No
+                  </input>
+            </label>
+            <label for="inp-6">
+                <input type="checkbox" name="inp">Love you bae
+                  </input>
+            </label>
+            <label for="inp-7">
+                <input type="checkbox" name="inp">I'm going insane
+                  </input>
+            </label>
+        </div>
+ 
+        <div class="form-control">
+            <label for="comment">
+                Checking to see if comments work. Don't know if we'll use it tho.
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                      placeholder="Enter your comment here">
+            </textarea>
+        </div>
+ 
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit me
+        </button>
+    </form>
+</body>
+</html>
