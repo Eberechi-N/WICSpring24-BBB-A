@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+
+//const { getElementById } = require("domutils");
+
 //const { getElementById } = require("domutils");
 
 var dry;
@@ -16,6 +18,14 @@ function settings(){
 
 }
 
+class preference{
+    constructor(skintype, issue, producttype, price){
+        this.skintype = skintype;
+        this.issue = issue;
+        this.producttype = producttype;
+        this.price = price;
+    }
+}
 
 class product {
     constructor(name, image, link, rating, skintype, issue, producttype, price ){
@@ -85,7 +95,7 @@ function FindProduct(skintype ="", issue="", producttype="", price=""){
     }
     if(goodProducts.length!=0){
         for(i=0;i<goodProducts.length;++i){
-            document.getElementById("here").innerHTML += "yooo";
+            //document.getElementById("here").innerHTML += "yooo";
 
             show_image(goodProducts[i].image,100,100,"picture", goodProducts[i].link);
         }
@@ -101,6 +111,7 @@ function FindProduct(skintype ="", issue="", producttype="", price=""){
 }
 
 function MakeProducts(){
+    prefered = new preference("","","",0);
     productList.push(new product("Kiehl's: Expertly Clear Moisturizer for Acne Prone Skin with Salicylic Acid","Images/KiehlsImage.webp","https://www.sephora.com/product/kiehls-expertly-clear-moisturizer-for-acne-prone-skin-with-salicylic-acid-P509461?icid2=",4.3,["dry"],["acne","cleanser","moisturize"], "cream", 42));
     productList.push(new product("Vanicream Gentle Facial Cleanser with Pump Dispenser - 8 fl oz - Formulated Without Common Irritants for Those with Sensitive Skin","Images/41hWGQ7tbNL._SX679_.jpg","https://www.amazon.com/Vanicream-Gentle-Cleanser-sensitive-Dispenser/dp/B00QY1XZ4W?asc_source=verso&asc_campaign=627cba2361fa2eaab969f60a%7Cehpc8DqarPLxQQAiCCkZjd&asc_refurl=https%3A%2F%2Fwww.allure.com%2Fskin-care%2Fsensitive-skin&ascsubtag=627cba2361fa2eaab969f60a&tag=allure0c3-20",4.7,["sensitive"],["cleanser"], "cream", 8.42));
     productList.push(new product("The Ordinary","Images/s2210607-main-zoom.webp","https://www.sephora.com/product/aha-30-bha-2-peeling-solution-P442563?icid2=",4.2,["oily"],["acne"], "solution", 9.50));
@@ -133,7 +144,21 @@ function show_image(src, width, height, alt, link) {
     document.body.appendChild(img);
 }
 
-=======
+function Submit(){
+    
+    console.log(prefered.skintype)
+    // document.getElementById("select-skinIssue").value,
+    // document.getElementById("select-prodSeek").value,
+    // Number(document.getElementById("select-price").value))
+
+    // FindProduct(document.getElementById("select-skinType").value,
+    // document.getElementById("select-skinIssue").value,
+    // document.getElementById("select-prodSeek").value,
+    // Number(document.getElementById("select-price").value))
+    
+}
+
+
 // Script.js 
 // Adding event listener to the form element 
 document 
@@ -310,4 +335,4 @@ function convertToCSV(objArr) {
 
 	return result; 
 }
->>>>>>> mergeTest
+

@@ -41,42 +41,42 @@
 
 			<label for = "Question 1">Question 1: What is your skin type?</label><br>
 			<label>
-				<input type="radio" name="select-skinType" value="sensitive" required>
+				<input id="select-skinType" type="radio" name="select-skinType" value="sensitive" required>
 				Sensitive
 			</label>
 			<label>
-				<input type="radio" name="select-skinType" value="required" required>
+				<input id="select-skinType" type="radio" name="select-skinType" value="dry" required>
 				Dry
 			</label>
 			<label>
-				<input type="radio" name="select-skinType" value="oily" required>
+				<input id="select-skinType" type="radio" name="select-skinType" value="oily" required>
 				Oily
 			</label>
 			<label>
-				<input type="radio" name="select-skinType" value="combination-normal" required>
+				<input id="select-skinType" type="radio" name="select-skinType" value="combination-normal" required>
 				Combination/Normal
 			</label><br>
 		
 			<!--Applies-->
 			<br><label for = "Question 2">Question 2: What is a skincare issue you would like to alleviate?</label><br>
 			<label>
-				<input type="radio" name="select-skinIssue" value="dryness" required>
+				<input id="select-skinIssue" type="radio" name="select-skinIssue" value="dryness" required>
 				Dryness
 			</label>
 			<label>
-				<input type="radio" name="select-skinIssue" value="acne" required>
+				<input id="select-skinIssue" type="radio" name="select-skinIssue" value="acne" required>
 				Acne
 			</label>
 			<label>
-				<input type="radio" name="select-skinIssue" value="hyperpigmentation" required>
+				<input id="select-skinIssue" type="radio" name="select-skinIssue" value="hyperpigmentation" required>
 				Hyperpigmentation
 			</label>
 			<label>
-				<input type="radio" name="select-skinIssue" value="anti-aging" required>
+				<input id="select-skinIssue" type="radio" name="select-skinIssue" value="anti-aging" required>
 				Anti-aging
 			</label>
 			<label>
-				<input type="radio" name="select-skinIssue" value="UV" required>
+				<input id="select-skinIssue" type="radio" name="select-skinIssue" value="uv" required>
 				UV
 			</label><br>
 
@@ -84,19 +84,19 @@
 			<!--Applies-->
 			<br><label for = "Question 3">Question 3: Is there a specific skincare product you are seeking?</label><br>
 			<label>
-				<input type="radio" name="select-prodSeek" value="cream required">
+				<input id="select-prodSeek" type="radio" name="select-prodSeek" value="cream">
 				Cream
             </label>
             <label>
-				<input type="radio" name="select-prodSeek" value="cleanser" required>
+				<input id="select-prodSeek" type="radio" name="select-prodSeek" value="cleanser" required>
 				Cleanser
             </label>
             <label>
-				<input type="radio" name="select-prodSeek" value="solution" required>
+				<input id="select-prodSeek" type="radio" name="select-prodSeek" value="solution" required>
 				Solution
             </label> 
 			<label>
-				<input type="radio" name="select-prodSeek" value="na" required>
+				<input id="select-prodSeek" type="radio" name="select-prodSeek" value="na" required>
 				Not looking for anything specific 
             </label><br>
 
@@ -177,21 +177,21 @@
 			<!--MC-->
 			<br><label for = "Question 8">Question 8: What is your price range for a product?</label><br>
 			<select id = "select-price" name="select-price" required>
-				<option name="select-price" value="">
+				<option id="select-price" name="select-price" value="">
 					Please select one...</option>
-				<option name="select-price" value="20">
-					<$20
+				<option id="select-price" name="select-price" value="20">
+					$20
 				</option>
-				<option name="select-price" value="25">
+				<option id="select-price" name="select-price" value="25">
 					$25-$50
 				</option>
-				<option name="select-price" value="50">
+				<option id="select-price" name="select-price" value="50">
 					$50-$75
 				</option>
-				<option name="select-price" value="75">
+				<option id="select-price" name="select-price" value="75">
 					$75-$100
 				</option>
-				<option name="select-price" value="100">
+				<option  name="select-price" value="100">
 					>$100
 				</option>
 			</select>
@@ -227,7 +227,7 @@
 				required><br> 
 			-->
 
-		<button type="submit"> 
+		<button type="button" OnClick='Submit()'> 
 				Submit 
 			</button> 
 		</form> 
