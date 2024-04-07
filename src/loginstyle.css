@@ -100,6 +100,8 @@
 
 .wrapper{
     position: relative;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
     width: 400px;
     height: 440px;
     background: #5c975c;
@@ -236,5 +238,12 @@
 .wrapper .register-link a:hover {
     text-decoration: underline;
 }
+
+.btn {
+    text-align: center;
+    text-decoration: none;
+        padding: 0.5rem;
+        border: 1px solid #333333;
+      }
 
 
