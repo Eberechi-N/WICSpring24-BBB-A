@@ -14,18 +14,15 @@
     font-size: 1.2rem;
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 
 .navbarContainer {
     display: flex;
-    justify-content: space-between;
     height: 80px;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 50px;
 }
 
 #navbarLogo {
@@ -44,20 +41,21 @@
 
 .navbarMenu {
     display: flex;
-    align-items: center;
-    list-style:none;
-    text-align:center;
+    align-items: right;
+    justify-content: right;
+    list-style: none;
+    text-align: center;
 }
 
 .navbarItem{
-    height: 80px
+    height: 80px;
+    
 }
 
 .navbarLinks {
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
@@ -67,7 +65,7 @@
 .navbarBtn{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     padding: 0 1rem;
     width: 100%;
 }
@@ -77,10 +75,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 10px 25px;
     text-decoration: none;
-    height: 100;
-    width: 100%;
+    height: 50px;
+    width: 125px;
     border: none;
     outline: none;
     border-radius: 4px;
