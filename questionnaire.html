@@ -18,12 +18,15 @@
 		<h1>Personal Skin Questionnaire</h1> 
 		<!-- Contains error -->
 		<h4 id="errorText"></h4> 
+		<h4 id="reloaded"></h4>
+		<h4 id="productErrorText"></h4>
+
 
 	
 		<!-- Form element -->
 		<form onsubmit="myfunc(event)" id="form"> 
 			<div>
-				<label for = "Question 1">Question 1: What is your skin type?</label><br>
+				<h3>Question 1: What is your skin type?</h3>
 				<label>
 					<input type="radio" id="skin_type" name="select-skinType" value="sensitive" required>
 					Sensitive
@@ -44,7 +47,7 @@
 			
 			<div>
 				<!--Applies-->
-				<label for = "Question 2">Question 2: What is a skincare issue you would like to alleviate?</label><br>
+				<h3>Question 2: What is a skincare issue you would like to alleviate?</h3>
 				<label>
 					<input type="radio" id="skin_issue" name="select-skinIssue" value="dryness" required>
 					Dryness
@@ -70,7 +73,7 @@
 
 			<!--Applies-->
 			<div>
-				<label for = "Question 3">Question 3: Is there a specific skincare product you are seeking?</label><br>
+				<h3>Question 3: Is there a specific skincare product you are seeking?</h3>
 				<label>
 					<input type="radio" id="skin_seek" name="select-prodSeek" value="cream" required>
 					Cream
@@ -91,7 +94,7 @@
 
 			<!--MC-->
 			<div>
-				<label for = "Question 4">Question 4: Which of these colors best represents your complexion?</label><br>
+				<h3>Question 4: Which of these colors best represents your complexion?</h3>
 				<label>
 					<input type="radio" id="skin_colors"  name="select-colors" value="light" required>
 					light
@@ -112,7 +115,7 @@
 		
 			<div>
 				<!--TF-->
-				<label for = "Question 5">Question 5: I need a product that I can get at my local store.</label><br>
+				<h3>Question 5: I need a product that I can get at my local store.</h3>
 				<label>
 					<input type="radio" id="skin_tf" name="truefalse" value="true" required>
 					True
@@ -126,7 +129,7 @@
 			
 			<!--MC-->
 			<div>
-				<label for = "Question 6">Question 6: Which part of the world are you from?</label><br>
+				<h3>Question 6: Which part of the world are you from?</h3>
 				<label>
 					<input type="radio" id="skin_world" name="select-country" value="asia" required>
 					Asia
@@ -159,7 +162,7 @@
 
 			<!--YN-->
 			<div>
-				<label for = "Question 7">Would you like your skincare product to also be used as makeup (Ex: A sunscreen that also is a foundation)?</label><br>
+				<h3>Would you like your skincare product to also be used as makeup (Ex: A sunscreen that also is a foundation)?</h3>
 				<label>
 					<input type="radio" id="skin_yn" name="yesno" value="yes" required>
 					Yes
@@ -172,7 +175,7 @@
 
 			<!--MC-->
 			<div>
-				<label for = "Question 8">Question 8: What is your price range for a product?</label><br>
+				<h3>Question 8: What is your price range for a product?</h3>
 				<select id = "skin_selectprice" name="select-price" required>
 					<option name="select-price" value="">
 						Please select one...</option>
@@ -201,6 +204,7 @@
 
 	<script type="text/javascript">
 		window.onload = function() {
+
         // Retrieve stored values from local storage
         var st = localStorage.getItem("ls_skin_type");
         var si = localStorage.getItem("ls_skin_issue");
@@ -210,6 +214,20 @@
         var syn = localStorage.getItem("ls_skin_yn");
         var sw = localStorage.getItem("ls_skin_world");
         var ss = localStorage.getItem("ls_skin_selectprice");
+
+		
+
+		if (localStorage.getItem("ls_skin_type")){
+			let reloaded = document.getElementById("reloaded");
+			reloaded.innerHTML = "Data Successfully Reloaded";
+			reloaded.classList.add("reloadedText");
+			setTimeout(() => {
+					reloaded.innerHTML = ""; 
+					reloaded.classList.remove("reloadedText");
+			}, 4000);
+		}
+
+
 
         // Set the values of radio buttons and select box based on stored values
         if (st) document.querySelector('input[name="select-skinType"][value="' + st + '"]').checked = true;
@@ -222,6 +240,7 @@
         if (ss) document.getElementById("skin_selectprice").value = ss;
 
 		MakeProducts();
+
     };
 
 		
@@ -260,17 +279,12 @@
 		//console.log(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
 		FindProduct(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
 
-
         let errorText = document.getElementById("errorText");
         errorText.innerHTML = "Submitted Successfully";
         errorText.classList.add("successText");
-
 	}
 
 	</script>
-
-
-
 
 	<!-- linking javascript file -->
 	<script src="script.js"></script>

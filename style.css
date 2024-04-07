@@ -22,9 +22,15 @@ h1 {
 	padding: 20px; 
 } 
 
+h3{
+	font-size: 15px;
+}
+
 label{ 
-	margin-top: 1rem; 
-	
+	margin-right: 1; 
+	font-size: 15px;
+	width: 100%; 
+	justify-content: center;
 } 
 
 button { 
@@ -54,10 +60,7 @@ input {
 } 
 
 /* Styling specific input types */
-input[type="textarea"] { 
-	width: 100%; 
-	height: 10rem; 
-} 
+
 
 .error { 
 	border: 3px solid red; 
@@ -69,18 +72,91 @@ input[type="textarea"] {
 	box-shadow: rgba(149, 157, 165, 0.2) 
 		0px 4px 12px; 
 	font-size: 1.2rem; 
-	font-family: "Lucida Sans", 
-		"Lucida Sans Regular", 
-		sans-serif; 
+	font-family: Georgia; 
 } 
 
+.reloadedText{
+	padding: 20px; 
+	background-color: #64856d; 
+
+	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
+	border-radius: 15px; 
+	/* box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px;  */
+	text-align: center;
+	font-size: 15px; 
+	font-family: Georgia; 
+
+	animation: slidein 0.5s ease forwards;
+}
+
+.reloadedText.hide{
+	animation: slideout 0.5s ease forwards;
+}
+
+
+
+.productErrorText{
+	padding: 20px; 
+	background-color: #ae1313; 
+
+	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
+	border-radius: 15px; 
+	/* box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px;  */
+	text-align: center;
+	font-size: 15px; 
+	font-family: Georgia; 
+}
+
+
 .successText { 
-	padding: 1rem; 
-	border: 4px solid #487454; 
-	box-shadow: rgba(149, 157, 165, 0.2) 
-		0px 4px 12px; 
-	font-size: 1.2rem; 
-	font-family: "Lucida Sans", 
-		"Lucida Sans Regular", 
-		sans-serif; 
+	padding: 20px; 
+	background-color: #64856d; 
+
+	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
+	border-radius: 15px; 
+	/* box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px;  */
+	text-align: center;
+	font-size: 15px; 
+	font-family: Georgia; 
 } 
+
+
+
+/*Animations*/
+@keyframes slidein{
+	from {
+		transform: translateY(-100%)
+	}
+
+	to{
+		transform: translateY(0%)
+	}
+
+	
+}
+
+@keyframes slideout{
+	from {
+		transform: translateY(0%)
+	}
+
+	to{
+		transform: translateY(-100%)
+	}
+
+	
+}
+
+
