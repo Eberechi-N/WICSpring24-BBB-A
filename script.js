@@ -142,6 +142,19 @@ function show_image(src, width, height, alt, link) {
     document.body.appendChild(img);
 }
 
+function Submit(){
+    
+    console.log(prefered.skintype)
+    // document.getElementById("select-skinIssue").value,
+    // document.getElementById("select-prodSeek").value,
+    // Number(document.getElementById("select-price").value))
+
+    // FindProduct(document.getElementById("select-skinType").value,
+    // document.getElementById("select-skinIssue").value,
+    // document.getElementById("select-prodSeek").value,
+    // Number(document.getElementById("select-price").value))
+    
+}
 
 // Script.js 
 // Adding event listener to the form element 
