@@ -88,22 +88,29 @@ function FindProduct(skintype ="", issue="", producttype="", price=""){
         if(!productList[i].priceMatch(price)){continue};
         goodProducts.push(productList[i]);
     }
-    if(goodProducts.length!=0){
-        for(i=0;i<goodProducts.length;++i){
-            show_image(goodProducts[i].image,100,100,"picture", goodProducts[i].link);
+    if (goodProducts.length != 0) {
+        for (i = 0; i < goodProducts.length; ++i) {
+            //show_image(goodProducts[i].image, 100, 100, "picture", goodProducts[i].link);
+            
+            var productInformation = document.createElement("div");
+            productInformation.classList.add("productInfo");
+            productInformation.classList.add("productContainer");
+            productInformation.innerHTML = `<img src="${goodProducts[i].image}" width="200" height="200" onclick="window.open('${goodProducts[i].link}');">
+                                            <p>Name: ${goodProducts[i].name}</p>
+                                            <p>Rating: ${goodProducts[i].rating}/5 </p>
+                                            <p>Price: $${goodProducts[i].price} USD</p>
+                                            `;
+            document.body.appendChild(productInformation);
         }
-        //console.log(goodProducts[0].name);
-        return goodProducts;
-    }
+    } 
     else{
         console.log("No matching products");
 
-		let productErrorText = document.getElementById("productErrorText");
-		productErrorText.innerHTML = "Product Not Founded";
-		productErrorText.classList.add("productErrorText");
+        let productErrorText = document.getElementById("productErrorText");
+        productErrorText.innerHTML = "Product Not Founded";
+        productErrorText.classList.add("productErrorText");
     }
-   
-  
+
 }
 
 function MakeProducts(){
