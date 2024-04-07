@@ -240,6 +240,11 @@ input {
 	font-family: Georgia; 
 }
 
+.productErrorText:hover{
+	transition: all 0.3 ease;
+}
+
+
 
 .successText { 
 	padding: 20px; 
