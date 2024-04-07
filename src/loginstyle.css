@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: #5c975c;
+    border: 2px solid #777;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #fefffe;
+}
+
+.wrapper h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    width: 100;
+    height: 50px;
+    margin: 30px 0;
+}
+
+
+.input-box label {
+    position: absolute;
+    font-size: 15px;
+    color:#000000;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color:#000000;
+    line-height: 57px;
+}
+/* This should be added to your existing CSS code */
+
+/* Input box styling */
+.wrapper .input-box {
+    margin: 20px 0;
+    position: relative;
+}
+
+/* Positioning the icons inside the input fields */
+.wrapper .input-box .icon {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: #7a7a7a;
+}
+
+/* Styling the input fields */
+.wrapper input[type="email"],
+.wrapper input[type="password"] {
+    width: calc(100% - 20px); /* Adjust width to allow padding */
+    padding: 15px 10px 15px 40px; /* Make room for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px; /* Add a little space above the input */
+}
+
+/* Styling the submit button */
+.wrapper button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wrapper button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the Remember Me and Forgot Password links */
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.wrapper .remember-forgot label {
+    cursor: pointer;
+}
+
+.wrapper .remember-forgot a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+.wrapper .remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Register link styling */
+.wrapper .register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrapper .register-link a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+.wrapper .register-link a:hover {
+    text-decoration: underline;
+}
