@@ -83,7 +83,7 @@ class product {
 }
 
 function FindProduct(skintype ="", issue="", producttype="", price=""){
-    goodProducts = [];
+    var goodProducts = [];
     for(i=0;i<productList.length;++i){
         if(!productList[i].skintypeMatch(skintype)){continue}
         if(!productList[i].issueMatch(issue)){continue}
@@ -142,9 +142,12 @@ function show_image(src, width, height, alt, link) {
     document.body.appendChild(img);
 }
 
-function Submit(){
+//function Submit(){
     
-    console.log(prefered.skintype)
+   // console.log(st , si, sk, Number(ss));
+    //console.log("submit in script:" +localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
+
+    //FindProduct(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
     // document.getElementById("select-skinIssue").value,
     // document.getElementById("select-prodSeek").value,
     // Number(document.getElementById("select-price").value))
@@ -154,31 +157,10 @@ function Submit(){
     // document.getElementById("select-prodSeek").value,
     // Number(document.getElementById("select-price").value))
     
-}
+//}
 
 // Script.js 
 // Adding event listener to the form element 
-document 
-	.getElementById("form") 
-	.addEventListener( 
-		"submit", 
-		function (event) { 
-			// PreventDefault() is used to avoid 
-			// Refreshing of browser while submit 
-			event.preventDefault();
-
-
-			let errorText = 
-				document.getElementById( 
-					"errorText"
-				); 
-
-			errorText.innerHTML = 
-			"Submitted Successfully"; 
-			
-			errorText.classList.add( 
-				"successText"
-			); 
 
 			
 
@@ -255,56 +237,7 @@ document
 			// Adding success message and styles 
 		
 
-			const formData = 
-				new FormData( 
-					event.target 
-				); 
-			const formValues = {}; 
-
-			// Storing each values in the object 
-			formData.forEach( 
-				(value, key) => { 
-					formValues[key] = 
-						value; 
-				} 
-			); 
-
-			// Calling convert function 
-			const csvContent = 
-				convertToCSV( 
-					formValues 
-				); 
-			const blob = new Blob( 
-				[csvContent], 
-				{ type: "text/csv" } 
-			); 
-
-			// Creating a link for downloading 
-			// Excel sheet 
-			const link = 
-				document.createElement( 
-					"a"
-				); 
-			link.href = 
-				window.URL.createObjectURL( 
-					blob 
-				); 
-			link.download = 
-				"survey_data.csv"; 
-			link.click(); 
-
-			// Reseting the form after certain 
-			// Timeout 2000ms => 2s 
-			setTimeout( 
-				document 
-					.getElementById( 
-						"form"
-					) 
-					.reset(), 
-				2000 
-			); 
-		} 
-	); 
+			
 
 // Function to convert object to csv 
 // function convertToCSV(objArr) { 
@@ -320,18 +253,18 @@ document
 // 		"\n"; 
 // 	result += header; 
 
-	for (const item in array) { 
-		if ( 
-			array.hasOwnProperty(item) 
-		) { 
-			result += array[item] + ","; 
-		} 
-	} 
-	result = result.slice(0, -1); 
-	result += "\n"; 
+// 	for (const item in array) { 
+// 		if ( 
+// 			array.hasOwnProperty(item) 
+// 		) { 
+// 			result += array[item] + ","; 
+// 		} 
+// 	} 
+// 	result = result.slice(0, -1); 
+// 	result += "\n"; 
 
-	return result; 
-}
+// 	return result; 
+// }
 
 // 	for (const item in array) { 
 // 		if ( 

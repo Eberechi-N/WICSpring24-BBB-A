@@ -61,7 +61,7 @@
 					Anti-aging
 				</label>
 				<label>
-					<input type="radio" name="select-skinIssue" value="UV" >
+					<input type="radio" name="select-skinIssue" value="uv" >
 					UV
 				</label>
 			</div>
@@ -176,7 +176,7 @@
 					<option name="select-price" value="">
 						Please select one...</option>
 					<option name="select-price" value="20">
-						<$20
+						$20
 					</option>
 					<option name="select-price" value="25">
 						$25-$50
@@ -193,7 +193,7 @@
 				</select>
 			</div>
 
-			<button type="submit">Submit</button>
+			<button type="submit">Submit </button>
 		</form> 
 	</div> 
 
@@ -219,9 +219,11 @@
         if (syn) document.querySelector('input[name="yesno"][value="' + syn + '"]').checked = true;
         if (sw) document.querySelector('input[name="select-country"][value="' + sw + '"]').checked = true;
         if (ss) document.getElementById("skin_selectprice").value = ss;
+
+		
     };
 
-
+		
 		function myfunc(event){
 		
 		event.preventDefault();
@@ -245,14 +247,18 @@
         localStorage.setItem('ls_skin_selectprice', ss);
 
         // You're retrieving values, but not using them anywhere
-        // console.log(localStorage.getItem("ls_skin_type"));
-        // console.log(localStorage.getItem("ls_skin_issue"));
-        // console.log(localStorage.getItem("ls_skin_seek"));
-        // console.log(localStorage.getItem("ls_skin_colors"));
-        // console.log(localStorage.getItem("ls_skin_tf"));
-        // console.log(localStorage.getItem("ls_skin_yn"));
-        // console.log(localStorage.getItem("ls_skin_world"));
-        // console.log(localStorage.getItem("ls_skin_selectprice"));
+        console.log(localStorage.getItem("ls_skin_type"));
+        console.log(localStorage.getItem("ls_skin_issue"));
+        console.log(localStorage.getItem("ls_skin_seek"));
+        console.log(localStorage.getItem("ls_skin_colors"));
+        console.log(localStorage.getItem("ls_skin_tf"));
+        console.log(localStorage.getItem("ls_skin_yn"));
+        console.log(localStorage.getItem("ls_skin_world"));
+        console.log(localStorage.getItem("ls_skin_selectprice"));
+
+		//console.log(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
+		FindProduct(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
+
 
         let errorText = document.getElementById("errorText");
         errorText.innerHTML = "Submitted Successfully";
@@ -266,7 +272,7 @@
 
 
 	<!-- linking javascript file -->
-	<!--<script src="script.js"></script>--> 
+	<script src="script.js"></script>
 
 </body> 
 </html>
