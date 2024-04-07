@@ -59,8 +59,12 @@ input {
 	margin: 1.2rem 0; 
 } 
 
-/* Styling specific input types */
 
+#result{
+	margin-top: 20px;
+	font-weight: bold; 
+
+}
 
 .error { 
 	border: 3px solid red; 
