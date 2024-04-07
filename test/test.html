@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <!-- Linking css file -->
+	<link rel="stylesheet" href="/src/style.css"> 
+    
+    <!--display name on tab-->
+    <title>SkinSolutions</title>
+</head>
+
+<body>
+    <!--navigation bar-->
+        <nav class="navbar">
+            <div class="navbarContainer">
+                <img src ="/public/woman.png" id = logo alt="Skin Logo">
+                <a href="/index.html" id="navbarLogo"> Home </a>
+            </div>
+        <div class="navbarBtn">
+            <ul class="navbarMenu">
+                <li class="navbarItem">
+                    <a href="/index.html" class="navbarLinks">Quiz</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="/About/" class="navbarLinks">About Me</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="/products/" class="navbarLinks">Products</a>
+                </li>
+            </ul>
+            <a href="/test.html" class="button">Login</a>
+        </div>
+        </nav> 
+
+
+
+ <!--login in page-->
+ <div class="wrapper">
+        <form action = "">
+        <h1>Login</h1>
+            <div class="input-box">
+                <span class = "icon"><ion-icon name="mail"></ion-icon></span>
+                <input type = "email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class = "icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type = "password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember Me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type = "submit" class="btn">Login</button>
+            <div class = "register-link">
+                <p> Don't have an account? <a
+                    href="#" >Register</a></p>
+            </div>
+        </form>  
+    </div>
+</div>
+
+
+    <!--Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <!-- linking javascript file -->
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+
+
+</body>
+</html>

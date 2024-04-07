@@ -1,4 +1,104 @@
-/* Style.css */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+}
+
+.navbar{
+    background: #417750;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+}
+
+.navbarContainer {
+    display: flex;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#navbarLogo {
+    color: #fff;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+.navbarMenu {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    list-style: none;
+    text-align: center;
+}
+
+.navbarItem{
+    height: 80px;
+    
+}
+
+.navbarLinks {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.navbarBtn{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    text-decoration: none;
+    height: 50px;
+    width: 125px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #CDE0D0;
+    color: #417750;
+}
+
+
+.button:hover{
+    background: #b4c1b6;
+    transition: all 0.3s ease;
+}
+
+.navbarLinks:hover{
+    text-decoration: underline;
+    transition: all 0.3 ease;
+}
+
+
+/* For questionnaire.html*/
 body{ 
 	font-family: Georgia; 
 	margin: 0; 
@@ -59,9 +159,6 @@ input {
 	margin: 1.2rem 0; 
 } 
 
-/* Styling specific input types */
-
-
 .error { 
 	border: 3px solid red; 
 } 
@@ -97,8 +194,6 @@ input {
 	animation: slideout 0.5s ease forwards;
 }
 
-
-
 .productErrorText{
 	padding: 20px; 
 	background-color: #ae1313; 
@@ -132,31 +227,21 @@ input {
 	font-family: Georgia; 
 } 
 
-
-
 /*Animations*/
 @keyframes slidein{
 	from {
 		transform: translateY(-100%)
 	}
-
 	to{
 		transform: translateY(0%)
 	}
-
-	
 }
 
 @keyframes slideout{
 	from {
 		transform: translateY(0%)
 	}
-
 	to{
 		transform: translateY(-100%)
-	}
-
-	
+	}	
 }
-
-
