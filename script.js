@@ -105,8 +105,11 @@ function FindProduct(skintype ="", issue="", producttype="", price=""){
         return goodProducts;
     }
     else{
-        
         console.log("No matching products");
+
+		let productErrorText = document.getElementById("productErrorText");
+		productErrorText.innerHTML = "Product Not Founded";
+		productErrorText.classList.add("productErrorText");
     }
    
   
@@ -130,7 +133,8 @@ function MakeProducts(){
     
     for(i=0;i<productList.length;++i){
     console.log("made products "+ productList[i].name);
-}
+	}
+
 }
 
 function show_image(src, width, height, alt, link) {

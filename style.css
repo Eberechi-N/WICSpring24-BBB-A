@@ -1,0 +1,162 @@
+/* Style.css */
+body{ 
+	font-family: Georgia; 
+	margin: 0; 
+	padding: 20px; 
+	background-color: #487454; 
+} 
+
+/* Form container */
+.container { 
+	max-width: 600px; 
+	margin: 0 auto; 
+	padding: 25px; 
+	background-color: #fefffe; 
+	border-radius: 15px; 
+	box-shadow: 0 0 10px
+		rgba(0, 0, 0, 0.1); 
+} 
+
+h1 { 
+	text-align: center; 
+	padding: 20px; 
+} 
+
+h3{
+	font-size: 15px;
+}
+
+label{ 
+	margin-right: 1; 
+	font-size: 15px;
+	width: 100%; 
+	justify-content: center;
+} 
+
+button { 
+	width: 100%; 
+	padding: 20px; 
+	background-color: #487454; 
+
+	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
+	border: none; 
+	border-radius: 10px; 
+	cursor: pointer; 
+} 
+
+button:hover { 
+	background-color: #b0d1b4; 
+	color: rgb(93, 93, 93); 
+	font-size: 16px;
+} 
+
+input { 
+	padding: 10px; 
+	box-sizing: border-box; 
+	margin: 1.2rem 0; 
+} 
+
+/* Styling specific input types */
+
+
+.error { 
+	border: 3px solid red; 
+} 
+
+.errorText { 
+	padding: 1rem; 
+	border: 2px solid red; 
+	box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px; 
+	font-size: 1.2rem; 
+	font-family: Georgia; 
+} 
+
+.reloadedText{
+	padding: 20px; 
+	background-color: #64856d; 
+
+	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
+	border-radius: 15px; 
+	/* box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px;  */
+	text-align: center;
+	font-size: 15px; 
+	font-family: Georgia; 
+
+	animation: slidein 0.5s ease forwards;
+}
+
+.reloadedText.hide{
+	animation: slideout 0.5s ease forwards;
+}
+
+
+
+.productErrorText{
+	padding: 20px; 
+	background-color: #ae1313; 
+
+	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
+	border-radius: 15px; 
+	/* box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px;  */
+	text-align: center;
+	font-size: 15px; 
+	font-family: Georgia; 
+}
+
+
+.successText { 
+	padding: 20px; 
+	background-color: #64856d; 
+
+	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
+	border-radius: 15px; 
+	/* box-shadow: rgba(149, 157, 165, 0.2) 
+		0px 4px 12px;  */
+	text-align: center;
+	font-size: 15px; 
+	font-family: Georgia; 
+} 
+
+
+
+/*Animations*/
+@keyframes slidein{
+	from {
+		transform: translateY(-100%)
+	}
+
+	to{
+		transform: translateY(0%)
+	}
+
+	
+}
+
+@keyframes slideout{
+	from {
+		transform: translateY(0%)
+	}
+
+	to{
+		transform: translateY(-100%)
+	}
+
+	
+}
+
+
