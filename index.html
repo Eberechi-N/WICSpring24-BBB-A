@@ -1,184 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
- 
-<head>
+<!-- Index.html -->
+<!DOCTYPE html> 
+<html lang="en"> 
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	
+	<!-- Linking css file -->
+	<link rel="stylesheet" href="style.css"> 
+	<title>BBB-A</title> 
+</head> 
 
-    <!--display name on tab-->
-    <title>
-        BBB-A Skin
-    </title>
- 
+<body> 
+	<!-- Creating the form container -->
+	<div class="container"> 
+		<h1>Personal Skin Questionnaire</h1> 
 
+		<!-- Contains error -->
+		<h4 id="errorText"></h4> 
 
-    <!--Style and coloring of the website-->
-    <style>
-        /* Color for the webpage background*/
-        body {
-            background-color: #fefffe;
-            font-family: Georgia;
-            text-align: center;
-        }
- 
-        /* Styling the Form (Color, Padding, Shadow) */
-        form {
-            background-color: #cee0d0;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 30px 20px;
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-        }
- 
-        /* Styling form-control Class */
-        .form-control {
-            text-align: left;
-            margin-bottom: 25px;
-        }
- 
-        /* Styling form-control Label */
-        .form-control label {
-            display: block;
-            margin-bottom: 10px;
-        }
- 
-        /* Styling form-control input, 
-        select, textarea */
-        .form-control input,
-        .form-control select,
-        .form-control textarea {
-            border: 1px solid #777;
-            border-radius: 2px;
-            font-family: inherit;
-            padding: 10px;
-            display: block;
-            width: 95%;
-        }
- 
-        /* Styling form-control Radio 
-        button and Checkbox */
-        .form-control input[type="radio"],
-        .form-control input[type="checkbox"] {
-            display: inline-block;
-            width: auto;
-        }
- 
-        /* Styling Button */
-        button {
-            background-color: #fefffe;
-            border: 1px solid #777;
-            border-radius: 2px;
-            font-family: inherit;
-            font-size: 21px;
-            display: block;
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
- 
+	
+		<!-- Form element -->
+		<form id="form"> 
+			<!--MC-->
+			<!--
+			<label for = "Question 1">Question 1: What is your skin type?</label><br>
+            <select id="select-skinType" required>
+				<option id="default" name="default" value="">
+					Please select one...</option>
+				<option id="sensitive" name="sensitive" value="sensitive">
+					Sensitive</option>
+				<option id="oily" name="oily" value="oily">
+					Oily</option>
+				<option id="dry" name="dry" value="dry">
+					Dry</option>
+				<option id="normal" name="normal" value="normal">
+					Normal/Combination</option>
+            </select><br>
+			-->
 
+			<label for = "Question 1">Question 1: What is your skin type?</label><br>
+			<label>
+				<input type="radio" name="select-skinType" value="sensitive" required>
+				Sensitive
+			</label>
+			<label>
+				<input type="radio" name="select-skinType" value="required" required>
+				Dry
+			</label>
+			<label>
+				<input type="radio" name="select-skinType" value="oily" required>
+				Oily
+			</label>
+			<label>
+				<input type="radio" name="select-skinType" value="combination-normal" required>
+				Combination/Normal
+			</label><br>
+		
+			<!--Applies-->
+			<br><label for = "Question 2">Question 2: What is a skincare issue you would like to alleviate?</label><br>
+			<label>
+				<input type="radio" name="select-skinIssue" value="dryness" required>
+				Dryness
+			</label>
+			<label>
+				<input type="radio" name="select-skinIssue" value="acne" required>
+				Acne
+			</label>
+			<label>
+				<input type="radio" name="select-skinIssue" value="hyperpigmentation" required>
+				Hyperpigmentation
+			</label>
+			<label>
+				<input type="radio" name="select-skinIssue" value="anti-aging" required>
+				Anti-aging
+			</label>
+			<label>
+				<input type="radio" name="select-skinIssue" value="UV" required>
+				UV
+			</label><br>
 
 
-<body>
-    <h1>SkinCare Questionnaire</h1>
-    <script>src = "script.js"</script>
-
-    <!-- Create Form -->
-    <form id="form">
- 
-        <!-- Details of the form-->
-
-        <div class="form-control">
-            <label for="role" id="label-role">
-                What is your skin type? 
+			<!--Applies-->
+			<br><label for = "Question 3">Question 3: Is there a specific skincare product you are seeking?</label><br>
+			<label>
+				<input type="radio" name="select-prodSeek" value="cream required">
+				Cream
             </label>
-            <!-- Dropdown options -->
-            <select name="role" id="role">
-                <option value="normal">Normal</option>
-                <option value="oily">Oily</option>
-                <option value="dry">Dry</option>
-                <option value="combination">Combination</option>
-                <option value="Unsure">Unsure</option>
-            </select>
-        </div>
- 
-        <div class="form-control">
             <label>
-                Checkbox test. Is this working? 
+				<input type="radio" name="select-prodSeek" value="cleanser" required>
+				Cleanser
             </label>
- 
-            <!-- Input Type Radio Button -->
-            <label for="recommed-1">
-                <input type="radio" id="recommed-1"
-                       name="recommed">Yes
-                  </input>
-            </label>
-            <label for="recommed-2">
-                <input type="radio" id="recommed-2"
-                       name="recommed">No
-                  </input>
-            </label>
-            <label for="recommed-3">
-                <input type="radio" id="recommed-3"
-                       name="recommed">Maybe
-                  </input>
-            </label>
-        </div>
- 
-        <div class="form-control">
-            <label>Checkbox with multiple choices. Is this working? 
-                <small>(Check all that apply)</small>
-            </label>
-            <!-- Input Type Checkbox -->
-            <label for="inp-1">
-                <input type="checkbox" name="inp">C
-                  </input>
-              </label>
-            <label for="inp-2">
-                <input type="checkbox" name="inp">Yes
-                  </input>
-            </label>
-            <label for="inp-3">
-                <input type="checkbox" name="inp">Fuck yes
-                  </input>
-            </label>
-            <label for="inp-4">
-                <input type="checkbox" name="inp">No
-                  </input>
-            </label>
-            <label for="inp-5">
-                <input type="checkbox" name="inp">Fuck No
-                  </input>
-            </label>
-            <label for="inp-6">
-                <input type="checkbox" name="inp">Love you bae
-                  </input>
-            </label>
-            <label for="inp-7">
-                <input type="checkbox" name="inp">I'm going insane
-                  </input>
-            </label>
-        </div>
- 
-        <div class="form-control">
-            <label for="comment">
-                Checking to see if comments work. Don't know if we'll use it tho.
-            </label>
- 
-            <!-- multi-line text input control -->
-            <textarea name="comment" id="comment"
-                      placeholder="Enter your comment here">
-            </textarea>
-        </div>
- 
-        <!-- Multi-line Text Input Control -->
-        <button type="submit" value="submit">
-            Submit me
-        </button>
-    </form>
-</body>
+            <label>
+				<input type="radio" name="select-prodSeek" value="solution" required>
+				Solution
+            </label> 
+			<label>
+				<input type="radio" name="select-prodSeek" value="na" required>
+				Not looking for anything specific 
+            </label><br>
+
+			<!--MC-->
+			<br><label for = "Question 4">Question 4: Which of these colors best represents your complexion?</label><br>
+			<label>
+				<input type="radio" name="select-colors" value="light" required>
+				light
+			</label>
+			<label>
+				<input type="radio" name="select-colors" value="fair" required>
+				fair
+			</label>
+			<label>
+				<input type="radio" name="select-colors" value="tan" required>
+				tan
+			</label>
+			<label>
+				<input type="radio" name="select-colors" value="dark" required>
+				dark
+			</label><br>
+		
+
+			<!--TF-->
+			<br><label for = "Question 5">Question 5: I need a product that I can get at my local store.</label><br>
+			<label>
+				<input type="radio" name="truefalse" value="true" required>
+				True
+			</label>
+			<label>
+				<input type="radio" name="truefalse" value="false" required>
+				False
+			</label><br>
+
+			
+			<!--MC-->
+			<br><label for = "Question 6">Question 6: Which part of the world are you from?</label><br>
+			<label>
+				<input type="radio" name="select-country" value="asia" required>
+				Asia
+			</label>
+			<label>
+				<input type="radio" name="select-country" value="africa" required>
+				Africa
+			</label>
+			<label>
+				<input type="radio" name="select-country" value="north-america" required>
+				North America
+			</label>
+			<label>
+				<input type="radio" name="select-country" value="south-america" required>
+				South America
+			</label>
+			<label>
+				<input type="radio" name="select-country" value="antarctica" required>
+				Antarctica
+			</label>
+			<label>
+				<input type="radio" name="select-country" value="australia" required>
+				Australia
+			</label>
+			<label>
+				<input type="radio" name="select-country" value="europe" required>
+				Europe
+			</label><br>
+
+			<!--YN-->
+			<br><label for = "Question 7">Would you like your skincare product to also be used as makeup (Ex: A sunscreen that also is a foundation)?</label><br>
+			<label>
+				<input type="radio" name="yesno" value="yes" required>
+				Yes
+			</label>
+			<label>
+				<input type="radio" name="yesno" value="no" required>
+				No
+			</label><br>
+
+			<!--MC-->
+			<br><label for = "Question 8">Question 8: What is your price range for a product?</label><br>
+			<select id = "select-price" name="select-price" required>
+				<option name="select-price" value="">
+					Please select one...</option>
+				<option name="select-price" value="20">
+					<$20
+				</option>
+				<option name="select-price" value="25">
+					$25-$50
+				</option>
+				<option name="select-price" value="50">
+					$50-$75
+				</option>
+				<option name="select-price" value="75">
+					$75-$100
+				</option>
+				<option name="select-price" value="100">
+					>$100
+				</option>
+			</select>
+			
+
+			<!--
+			<label for="name"> 
+				Name: 
+			</label><br> 
+			<input type="text"
+				id="name"
+				name="name"
+				required><br> 
+			-->
+
+			<!--
+			<label for="age"> 
+				Age: 
+			</label><br> 
+			<input type="number"
+				id="age"
+				name="age"
+				required><br> 
+			-->
+
+			<!--
+			<label for="favourite-sport"> 
+				Favorite Sport to Watch: 
+			</label><br> 
+			<input type="text"
+				id="favorite-sport"
+				name="favorite-sport"
+				required><br> 
+			-->
+
+		<button type="submit"> 
+				Submit 
+			</button> 
+		</form> 
+	</div> 
+
+	<!-- linking javascript file -->
+	<script src="script.js"></script> 
+</body> 
+
 </html>
