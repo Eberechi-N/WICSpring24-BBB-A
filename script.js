@@ -1,8 +1,6 @@
 
 //const { getElementById } = require("domutils");
 
-//const { getElementById } = require("domutils");
-
 var dry;
 var oily;
 var normal;
@@ -142,20 +140,6 @@ function show_image(src, width, height, alt, link) {
     };
     // This next line will just add it to the <body> tag
     document.body.appendChild(img);
-}
-
-function Submit(){
-    
-    console.log(prefered.skintype)
-    // document.getElementById("select-skinIssue").value,
-    // document.getElementById("select-prodSeek").value,
-    // Number(document.getElementById("select-price").value))
-
-    // FindProduct(document.getElementById("select-skinType").value,
-    // document.getElementById("select-skinIssue").value,
-    // document.getElementById("select-prodSeek").value,
-    // Number(document.getElementById("select-price").value))
-    
 }
 
 
@@ -310,18 +294,18 @@ document
 	); 
 
 // Function to convert object to csv 
-function convertToCSV(objArr) { 
-	const array = 
-		typeof objArr !== "object"
-			? JSON.parse(objArr) 
-			: objArr; 
-	let result = ""; 
+// function convertToCSV(objArr) { 
+// 	const array = 
+// 		typeof objArr !== "object"
+// 			? JSON.parse(objArr) 
+// 			: objArr; 
+// 	let result = ""; 
 
-	// Add commas to make it as csv 
-	const header = 
-		Object.keys(array).join(",") + 
-		"\n"; 
-	result += header; 
+// 	// Add commas to make it as csv 
+// 	const header = 
+// 		Object.keys(array).join(",") + 
+// 		"\n"; 
+// 	result += header; 
 
 	for (const item in array) { 
 		if ( 
@@ -336,3 +320,19 @@ function convertToCSV(objArr) {
 	return result; 
 }
 
+// 	for (const item in array) { 
+// 		if ( 
+// 			array.hasOwnProperty(item) 
+// 		) { 
+// 			result += array[item] + ","; 
+// 		} 
+// 	} 
+// 	result = result.slice(0, -1); 
+// 	result += "\n"; 
+
+// 	return result; 
+// }
+
+function newWindowButton(){
+	window.location.replace("https://eberechi-n.github.io/WICSpring24-BBB-A/index.html")
+}

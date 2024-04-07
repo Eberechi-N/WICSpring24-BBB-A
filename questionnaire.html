@@ -1,0 +1,272 @@
+<!-- Index.html -->
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	
+	<!-- Linking css file -->
+	<link rel="stylesheet" href="style.css"> 
+	<title>BBB-A</title> 
+</head> 
+
+<body> 
+	<!-- Creating the form container -->
+	<div class="container"> 
+		<h1>Personal Skin Questionnaire</h1> 
+		<!-- Contains error -->
+		<h4 id="errorText"></h4> 
+
+	
+		<!-- Form element -->
+		<form onsubmit="myfunc(event)" id="form"> 
+			<div>
+				<label for = "Question 1">Question 1: What is your skin type?</label><br>
+				<label>
+					<input type="radio" id="skin_type" name="select-skinType" value="sensitive" required>
+					Sensitive
+				</label>
+				<label>
+					<input type="radio" name="select-skinType" value="dry" >
+					Dry
+				</label>
+				<label>
+					<input type="radio" name="select-skinType" value="oily" >
+					Oily
+				</label>
+				<label>
+					<input type="radio" name="select-skinType" value="combination-normal" >
+					Combination/Normal
+				</label>
+			</div>
+			
+			<div>
+				<!--Applies-->
+				<label for = "Question 2">Question 2: What is a skincare issue you would like to alleviate?</label><br>
+				<label>
+					<input type="radio" id="skin_issue" name="select-skinIssue" value="dryness" required>
+					Dryness
+				</label>
+				<label>
+					<input type="radio" name="select-skinIssue" value="acne" >
+					Acne
+				</label>
+				<label>
+					<input type="radio" name="select-skinIssue" value="hyperpigmentation" >
+					Hyperpigmentation
+				</label>
+				<label>
+					<input type="radio" name="select-skinIssue" value="anti-aging" >
+					Anti-aging
+				</label>
+				<label>
+					<input type="radio" name="select-skinIssue" value="UV" >
+					UV
+				</label>
+			</div>
+
+
+			<!--Applies-->
+			<div>
+				<label for = "Question 3">Question 3: Is there a specific skincare product you are seeking?</label><br>
+				<label>
+					<input type="radio" id="skin_seek" name="select-prodSeek" value="cream" required>
+					Cream
+				</label>
+				<label>
+					<input type="radio" name="select-prodSeek" value="cleanser" >
+					Cleanser
+				</label>
+				<label>
+					<input type="radio" name="select-prodSeek" value="solution" >
+					Solution
+				</label> 
+				<label>
+					<input type="radio" name="select-prodSeek" value="na" >
+					Not looking for anything specific 
+				</label>
+			</div>
+
+			<!--MC-->
+			<div>
+				<label for = "Question 4">Question 4: Which of these colors best represents your complexion?</label><br>
+				<label>
+					<input type="radio" id="skin_colors"  name="select-colors" value="light" required>
+					light
+				</label>
+				<label>
+					<input type="radio" name="select-colors" value="fair" >
+					fair
+				</label>
+				<label>
+					<input type="radio" name="select-colors" value="tan" >
+					tan
+				</label>
+				<label>
+					<input type="radio" name="select-colors" value="dark" >
+					dark
+				</label>
+			</div>
+		
+			<div>
+				<!--TF-->
+				<label for = "Question 5">Question 5: I need a product that I can get at my local store.</label><br>
+				<label>
+					<input type="radio" id="skin_tf" name="truefalse" value="true" required>
+					True
+				</label>
+				<label>
+					<input type="radio" name="truefalse" value="false" >
+					False
+				</label>
+			</div>
+
+			
+			<!--MC-->
+			<div>
+				<label for = "Question 6">Question 6: Which part of the world are you from?</label><br>
+				<label>
+					<input type="radio" id="skin_world" name="select-country" value="asia" required>
+					Asia
+				</label>
+				<label>
+					<input type="radio" name="select-country" value="africa" >
+					Africa
+				</label>
+				<label>
+					<input type="radio" name="select-country" value="north-america" >
+					North America
+				</label>
+				<label>
+					<input type="radio" name="select-country" value="south-america" >
+					South America
+				</label>
+				<label>
+					<input type="radio" name="select-country" value="antarctica" >
+					Antarctica
+				</label>
+				<label>
+					<input type="radio" name="select-country" value="australia" >
+					Australia
+				</label>
+				<label>
+					<input type="radio" name="select-country" value="europe" >
+					Europe
+				</label>
+			</div>
+
+			<!--YN-->
+			<div>
+				<label for = "Question 7">Would you like your skincare product to also be used as makeup (Ex: A sunscreen that also is a foundation)?</label><br>
+				<label>
+					<input type="radio" id="skin_yn" name="yesno" value="yes" required>
+					Yes
+				</label>
+				<label>
+					<input type="radio" name="yesno" value="no" >
+					No
+				</label>
+			</div>
+
+			<!--MC-->
+			<div>
+				<label for = "Question 8">Question 8: What is your price range for a product?</label><br>
+				<select id = "skin_selectprice" name="select-price" required>
+					<option name="select-price" value="">
+						Please select one...</option>
+					<option name="select-price" value="20">
+						<$20
+					</option>
+					<option name="select-price" value="25">
+						$25-$50
+					</option>
+					<option name="select-price" value="50">
+						$50-$75
+					</option>
+					<option name="select-price" value="75">
+						$75-$100
+					</option>
+					<option name="select-price" value="100">
+						>$100
+					</option>
+				</select>
+			</div>
+
+			<button type="submit">Submit</button>
+		</form> 
+	</div> 
+
+
+	<script type="text/javascript">
+		window.onload = function() {
+        // Retrieve stored values from local storage
+        var st = localStorage.getItem("ls_skin_type");
+        var si = localStorage.getItem("ls_skin_issue");
+        var sk = localStorage.getItem("ls_skin_seek");
+        var sc = localStorage.getItem("ls_skin_colors");
+        var stf = localStorage.getItem("ls_skin_tf");
+        var syn = localStorage.getItem("ls_skin_yn");
+        var sw = localStorage.getItem("ls_skin_world");
+        var ss = localStorage.getItem("ls_skin_selectprice");
+
+        // Set the values of radio buttons and select box based on stored values
+        if (st) document.querySelector('input[name="select-skinType"][value="' + st + '"]').checked = true;
+        if (si) document.querySelector('input[name="select-skinIssue"][value="' + si + '"]').checked = true;
+        if (sk) document.querySelector('input[name="select-prodSeek"][value="' + sk + '"]').checked = true;
+        if (sc) document.querySelector('input[name="select-colors"][value="' + sc + '"]').checked = true;
+        if (stf) document.querySelector('input[name="truefalse"][value="' + stf + '"]').checked = true;
+        if (syn) document.querySelector('input[name="yesno"][value="' + syn + '"]').checked = true;
+        if (sw) document.querySelector('input[name="select-country"][value="' + sw + '"]').checked = true;
+        if (ss) document.getElementById("skin_selectprice").value = ss;
+    };
+
+
+		function myfunc(event){
+		
+		event.preventDefault();
+
+		var st = document.querySelector('input[name="select-skinType"]:checked').value;
+        var si = document.querySelector('input[name="select-skinIssue"]:checked').value;
+        var sk = document.querySelector('input[name="select-prodSeek"]:checked').value;
+        var sc = document.querySelector('input[name="select-colors"]:checked').value;
+        var stf = document.querySelector('input[name="truefalse"]:checked').value;
+        var syn = document.querySelector('input[name="yesno"]:checked').value;
+        var sw = document.querySelector('input[name="select-country"]:checked').value;
+        var ss = document.getElementById("skin_selectprice").value;
+
+        localStorage.setItem('ls_skin_type', st);
+        localStorage.setItem('ls_skin_issue', si);
+        localStorage.setItem('ls_skin_seek', sk);
+        localStorage.setItem('ls_skin_colors', sc);
+        localStorage.setItem('ls_skin_tf', stf);
+        localStorage.setItem('ls_skin_yn', syn);
+        localStorage.setItem('ls_skin_world', sw);
+        localStorage.setItem('ls_skin_selectprice', ss);
+
+        // You're retrieving values, but not using them anywhere
+        // console.log(localStorage.getItem("ls_skin_type"));
+        // console.log(localStorage.getItem("ls_skin_issue"));
+        // console.log(localStorage.getItem("ls_skin_seek"));
+        // console.log(localStorage.getItem("ls_skin_colors"));
+        // console.log(localStorage.getItem("ls_skin_tf"));
+        // console.log(localStorage.getItem("ls_skin_yn"));
+        // console.log(localStorage.getItem("ls_skin_world"));
+        // console.log(localStorage.getItem("ls_skin_selectprice"));
+
+        let errorText = document.getElementById("errorText");
+        errorText.innerHTML = "Submitted Successfully";
+        errorText.classList.add("successText");
+
+	}
+
+	</script>
+
+
+
+
+	<!-- linking javascript file -->
+	<!--<script src="script.js"></script>--> 
+
+</body> 
+</html>
