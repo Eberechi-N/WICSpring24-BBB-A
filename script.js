@@ -82,6 +82,10 @@ class product {
     }
 }
 
+// window.onload = function() {
+//     MakeProducts();
+//   };
+
 function FindProduct(skintype ="", issue="", producttype="", price=""){
     var goodProducts = [];
     for(i=0;i<productList.length;++i){
