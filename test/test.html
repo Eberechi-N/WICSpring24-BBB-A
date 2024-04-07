@@ -7,12 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="test.css">
+    <!-- Linking css file -->
+	<link rel="stylesheet" href="/src/style.css"> 
     
     <!--display name on tab-->
-    <title>SkinSolutions </title>
+    <title>SkinSolutions</title>
 </head>
 
 <body>
+    <!--navigation bar-->
+        <nav class="navbar">
+            <div class="navbarContainer">
+                <img src ="/public/woman.png" id = logo alt="Skin Logo">
+                <a href="/index.html" id="navbarLogo"> Home </a>
+            </div>
+        <div class="navbarBtn">
+            <ul class="navbarMenu">
+                <li class="navbarItem">
+                    <a href="/index.html" class="navbarLinks">Quiz</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="/About/" class="navbarLinks">About Me</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="/products/" class="navbarLinks">Products</a>
+                </li>
+            </ul>
+            <a href="/test.html" class="button">Login</a>
+        </div>
+        </nav> 
+
+
+
  <!--login in page-->
  <div class="wrapper">
         <form action = "">
@@ -39,11 +65,15 @@
         </form>  
     </div>
 </div>
-<script src="login.js"></script>
 
-<!--Icons-->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+
+    <!--Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <!-- linking javascript file -->
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+
 
 </body>
 </html>
