@@ -1,4 +1,4 @@
-<!-- Index.html -->
+<!--Main Page-->
 <!DOCTYPE html> 
 <html lang="en"> 
 
@@ -7,11 +7,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	
 	<!-- Linking css file -->
-	<link rel="stylesheet" href="style.css"> 
-	<title>BBB-A</title> 
-</head> 
+	<link rel="stylesheet" href="/src/style.css"> 
+	
+	<!--Tab Title-->
+    <title>SkinSolutions</title>
+</head>
 
-<body> 
+
+<body>
+    <!--navigation bar-->
+    <nav class="navbar">
+        <div class="navbarContainer">
+            <img src ="public/woman.png" id = logo alt="Skin Logo">
+            <a href="#" id="navbarLogo"> Home </a>
+    </div>
+    <div class="navbarBtn">
+        <ul class="navbarMenu">
+            <li class="navbarItem">
+                <a href="/index.html" class="navbarLinks"> Quiz </a>
+            </li>
+            <li class="navbarItem">
+                <a href="/About/" class="navbarLinks">About Me</a>
+            </li>
+            <li class="navbarItem">
+                <a href="/products/" class="navbarLinks">Products</a>
+            </li>
+        </ul>
+        <a href="/test/test.html" class="button">Login</a>
+    </div>
+    </nav> 
+
+
 
 	<!-- Creating the form container -->
 	<div class="container"> 
@@ -21,9 +47,7 @@
 		<h4 id="reloaded"></h4>
 		<h4 id="productErrorText"></h4>
 
-
-	
-		<!-- Form element -->
+		<!--Questions-->
 		<form onsubmit="myfunc(event)" id="form"> 
 			<div>
 				<h3>Question 1: What is your skin type?</h3>
@@ -227,8 +251,6 @@
 			}, 4000);
 		}
 
-
-
         // Set the values of radio buttons and select box based on stored values
         if (st) document.querySelector('input[name="select-skinType"][value="' + st + '"]').checked = true;
         if (si) document.querySelector('input[name="select-skinIssue"][value="' + si + '"]').checked = true;
@@ -240,11 +262,10 @@
         if (ss) document.getElementById("skin_selectprice").value = ss;
 
 		MakeProducts();
-
     };
 
 		
-		function myfunc(event){
+	function myfunc(event){
 		
 		event.preventDefault();
 
@@ -266,7 +287,6 @@
         localStorage.setItem('ls_skin_world', sw);
         localStorage.setItem('ls_skin_selectprice', ss);
 
-        // You're retrieving values, but not using them anywhere
         console.log(localStorage.getItem("ls_skin_type"));
         console.log(localStorage.getItem("ls_skin_issue"));
         console.log(localStorage.getItem("ls_skin_seek"));
@@ -276,9 +296,9 @@
         console.log(localStorage.getItem("ls_skin_world"));
         console.log(localStorage.getItem("ls_skin_selectprice"));
 
-		//console.log(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
 		FindProduct(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
 
+		//Successed Text
         let errorText = document.getElementById("errorText");
         errorText.innerHTML = "Submitted Successfully";
         errorText.classList.add("successText");
@@ -286,8 +306,8 @@
 
 	</script>
 
-	<!-- linking javascript file -->
+	<!--Externel File-->
 	<script src="script.js"></script>
-
-</body> 
+	
+	</body> 
 </html>

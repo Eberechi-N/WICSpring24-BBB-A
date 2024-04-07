@@ -1,6 +1,3 @@
-
-//const { getElementById } = require("domutils");
-
 var dry;
 var oily;
 var normal;
@@ -82,10 +79,6 @@ class product {
     }
 }
 
-// window.onload = function() {
-//     MakeProducts();
-//   };
-
 function FindProduct(skintype ="", issue="", producttype="", price=""){
     var goodProducts = [];
     for(i=0;i<productList.length;++i){
@@ -97,11 +90,9 @@ function FindProduct(skintype ="", issue="", producttype="", price=""){
     }
     if(goodProducts.length!=0){
         for(i=0;i<goodProducts.length;++i){
-            //document.getElementById("here").innerHTML += "yooo";
-
             show_image(goodProducts[i].image,100,100,"picture", goodProducts[i].link);
         }
-        console.log(goodProducts[0].name);
+        //console.log(goodProducts[0].name);
         return goodProducts;
     }
     else{
@@ -138,13 +129,10 @@ function MakeProducts(){
     productList.push(new product("COSRX: Vitamin E Vitalizing Sunscreen SPF 50+","Images\cosrx.webp","https://sokoglam.com/collections/spf/products/vitamin-e-vitalizing-sunscreen",4.7,["dry","normal-combination"],["uv", "dryness"], "cream", 23.00));
     productList.push(new product("KLAIRS: Rich Moist Soothing Cream","Images\klairs.webp","https://sokoglam.com/collections/moisturizers/products/klairs-rich-moist-soothing-cream",4.5,["dry","sensitive","normal-combination"],["dryness"], "cream", 26.00));
 
-
-
     
     for(i=0;i<productList.length;++i){
     console.log("made products "+ productList[i].name);
 	}
-
 }
 
 function show_image(src, width, height, alt, link) {
@@ -160,143 +148,6 @@ function show_image(src, width, height, alt, link) {
     document.body.appendChild(img);
 }
 
-//function Submit(){
-    
-   // console.log(st , si, sk, Number(ss));
-    //console.log("submit in script:" +localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
-
-    //FindProduct(localStorage.getItem("ls_skin_type"),localStorage.getItem("ls_skin_issue"),localStorage.getItem("ls_skin_seek"),localStorage.getItem("ls_skin_selectprice"));
-    // document.getElementById("select-skinIssue").value,
-    // document.getElementById("select-prodSeek").value,
-    // Number(document.getElementById("select-price").value))
-
-    // FindProduct(document.getElementById("select-skinType").value,
-    // document.getElementById("select-skinIssue").value,
-    // document.getElementById("select-prodSeek").value,
-    // Number(document.getElementById("select-price").value))
-    
-//}
-
-// Script.js 
-// Adding event listener to the form element 
-
-			
-
-			// let nameField = 
-			// 	document.getElementById( 
-			// 		"name"
-			// 	); 
-			// let ageField = 
-			// 	document.getElementById( 
-			// 		"age"
-			// 	); 
-			
-
-			// let name = nameField.value; 
-			// let age = ageField.value; 
-
-			// Creating a regular expression for 
-			// Name field 
-			// let Regex = /^[A-Za-z ]+$/; 
-
-			// If name does not matches the 
-			// Regular expression 
-			// if (!name.match(Regex)) { 
-			// 	nameField.classList.add( 
-			// 		"error"
-			// 	); 
-			// 	errorText.innerHTML = 
-			// 		`Name field should only contain 
-			// 		English alphabets and spaces`; 
-			// 	errorText.classList.add( 
-			// 		"errorText"
-			// 	); 
-			// 	return; 
-			// } 
-
-			// Check whether age is between 1 and 150 
-			// else if ( 
-			// 	isNaN(age) || 
-			// 	age < 1 || 
-			// 	age > 150 
-			// ) { 
-			// 	ageField.classList.add( 
-			// 		"error"
-			// 	); 
-			// 	errorText.innerHTML = 
-			// 		`Age should only contain valid 
-			// 		values ( 1 - 150 )`; 
-			// 	errorText.classList.add( 
-			// 		"errorText"
-			// 	); 
-			// 	return; 
-			// } 
-
-			// Removing red border in name field 
-			// if ( 
-			// 	nameField.classList.contains( 
-			// 		"error"
-			// 	) 
-			// ) 
-			// 	nameField.classList.remove( 
-			// 		"error"
-			// 	); 
-
-			// // Removing red border in age field 
-			// if ( 
-			// 	ageField.classList.contains( 
-			// 		"error"
-			// 	) 
-			// ) 
-			// 	ageField.classList.remove( 
-			// 		"error"
-			// 	); 
-
-			// Adding success message and styles 
-		
-
-			
-
-// Function to convert object to csv 
-// function convertToCSV(objArr) { 
-// 	const array = 
-// 		typeof objArr !== "object"
-// 			? JSON.parse(objArr) 
-// 			: objArr; 
-// 	let result = ""; 
-
-// 	// Add commas to make it as csv 
-// 	const header = 
-// 		Object.keys(array).join(",") + 
-// 		"\n"; 
-// 	result += header; 
-
-// 	for (const item in array) { 
-// 		if ( 
-// 			array.hasOwnProperty(item) 
-// 		) { 
-// 			result += array[item] + ","; 
-// 		} 
-// 	} 
-// 	result = result.slice(0, -1); 
-// 	result += "\n"; 
-
-// 	return result; 
-// }
-
-// 	for (const item in array) { 
-// 		if ( 
-// 			array.hasOwnProperty(item) 
-// 		) { 
-// 			result += array[item] + ","; 
-// 		} 
-// 	} 
-// 	result = result.slice(0, -1); 
-// 	result += "\n"; 
-
-// 	return result; 
-// }
-
-function newWindowButton(){
-	window.location.replace("https://eberechi-n.github.io/WICSpring24-BBB-A/index.html")
+function questionnaireButton(){
+	window.location.replace("http://127.0.0.1:5500/questionnaire.html")
 }
