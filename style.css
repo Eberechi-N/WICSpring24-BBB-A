@@ -1,6 +1,6 @@
 /* Style.css */
-body { 
-	font-family: serif; 
+body{ 
+	font-family: Georgia; 
 	margin: 0; 
 	padding: 20px; 
 	background-color: #487454; 
@@ -10,39 +10,42 @@ body {
 .container { 
 	max-width: 600px; 
 	margin: 0 auto; 
-	padding: 20px; 
+	padding: 25px; 
 	background-color: #fefffe; 
-	border-radius: 10px; 
+	border-radius: 15px; 
 	box-shadow: 0 0 10px
 		rgba(0, 0, 0, 0.1); 
 } 
 
 h1 { 
 	text-align: center; 
+	padding: 20px; 
 } 
 
-label { 
+label{ 
 	margin-top: 1rem; 
+	
 } 
 
 button { 
 	width: 100%; 
-	padding: 10px; 
+	padding: 20px; 
 	background-color: #487454; 
+
 	color: white; 
+	font-size: 16px;
+	text-align: center; 
+
 	border: none; 
 	border-radius: 10px; 
 	cursor: pointer; 
 } 
 
 button:hover { 
-	background-color: #cee0d0; 
+	background-color: #b0d1b4; 
+	color: rgb(93, 93, 93); 
+	font-size: 16px;
 } 
-
-
-
-
-
 
 input { 
 	padding: 10px; 
@@ -51,19 +54,10 @@ input {
 } 
 
 /* Styling specific input types */
-input[type="text"], 
-input[type="number"] { 
-	width: 100%; 
-} 
-
 input[type="textarea"] { 
 	width: 100%; 
 	height: 10rem; 
 } 
-
-
-
-
 
 .error { 
 	border: 3px solid red; 
